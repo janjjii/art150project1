@@ -1,3 +1,3 @@
-# art150
+# art150project1
 
 MUSIC READING 101 – This program will produce a simple set of clefs (treble and bass) in which you can draw notes and have it identified. The clef type (treble/bass) and note name (A-G) will be identified in the console. Note values can be modified. Instructions display a key that you can press to change the note value. You will be able to see what whole, half, quarter, eighth, and sixteenth notes look like. Note values are for aesthetic and identification purposes, they do not have any further functions. Make sure to have the console in sight because the instructions and identifications will be there.
