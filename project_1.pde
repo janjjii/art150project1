@@ -38,15 +38,17 @@ void draw()
   {
     line(0, (i * 25) + 50, width, (i * 25) + 50);
   }
-  
   for(int i = 1; i <= 5; i++)
   {
     line(0, (i * 25) + 200, width, (i * 25) + 200);
   }
   
   // note identifier
-  // bass
+  // out of bounds
+  if(mouseY < 70){println("not within the treble octave");}
   if(mouseY > 326){println("not within the bass clef octave");}
+  
+  // bass
   if(mouseY >= 200 && mouseY <= 325)
   {
     if(mouseY >= 320 && mouseY <= 340){println("Bass G");}
@@ -60,9 +62,11 @@ void draw()
     if(mouseY >= 220 && mouseY <= 232){println("Bass A");}
     if(mouseY >= 210 && mouseY <= 219){println("Bass B");}
   }
+  
+  // middle c
   if(mouseY >= 195 && mouseY <= 209){println("Middle C");}
+  
   // treble
-  if(mouseY < 70){println("not within the treble octave");}
   if(mouseY >= 70 && mouseY < 195)
   {
     if(mouseY >= 183 && mouseY <= 194){println("Treble D");}
@@ -115,7 +119,6 @@ void draw()
     rect(mouseX + 15, mouseY - 70, 5, 70);
     println("Sixteenth");
   }
-  // println("X = " + mouseX + " Y = " + mouseY);
 }
 
 void keyPressed()
@@ -164,9 +167,5 @@ void keyPressed()
     quarter = false;
     eigth = false;
     sixteenth = true;
-  }
-  if (key == 's') 
-  {
-    saveFrame("sample.png");
   }
 }
